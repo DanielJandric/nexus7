@@ -8,4 +8,5 @@ healthcheckPath = "/"
 healthcheckTimeout = 100
 
 [env]
-NODE_ENV = "production" 
+NODE_ENV = "production"
+NODE_VERSION = "20.19.0" 
