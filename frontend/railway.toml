@@ -1,11 +1,13 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install && ng build --configuration production"
+buildCommand = "npm install && npm run build"
 
 [deploy]
 startCommand = "npx serve -s dist/frontend -p $PORT --single"
 healthcheckPath = "/"
 healthcheckTimeout = 100
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 10
 
 [env]
 NODE_ENV = "production"
