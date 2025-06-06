@@ -3,7 +3,7 @@ builder = "nixpacks"
 buildCommand = "npm install && ng build --configuration production"
 
 [deploy]
-startCommand = "npx serve -s dist/frontend -p $PORT"
+startCommand = "npx serve -s dist/frontend -p $PORT --single"
 healthcheckPath = "/"
 healthcheckTimeout = 100
 
